@@ -24,9 +24,13 @@ function createBoxes(amount) {
 
 createBtn.addEventListener("click", function () {
   const amount = input.value;
-  if (amount > 0) createBoxes(amount);
+
+  if (amount > 0 && amount <= 100) {
+    createBoxes(amount);
+  } else alert("введите число от 0 до 100");
 });
 
 destroyBtn.addEventListener("click", function () {
   boxes.innerHTML = "";
+  input.value = "";
 });

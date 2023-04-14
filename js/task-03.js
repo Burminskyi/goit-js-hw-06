@@ -16,9 +16,9 @@ const images = [
 const gallery = document.querySelector(".gallery");
 
 const markup = images
-  .flatMap(
+  .map(
     (image) => `<li><img
-     src="${image.url}" alt="${image.alt}"></li>
+     src="${image.url}" alt="${image.alt}" width = "300" height = "auto"></li>
    `
   )
   .join("");
